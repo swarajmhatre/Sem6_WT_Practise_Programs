@@ -1,0 +1,20 @@
+//Servlet LifeCycle
+import java.io.*;
+import java.servlet.*;
+import java.servlet.http.*;
+
+
+public class LifeCycle extends GenericServlet{
+public void init(ServletConfig Config) throws ServletException
+{
+Sytem.out.println("Init");
+}
+public void service(ServletRequest request, ServletResponse response)throws ServletException, IOException{ 
+System.out.println("service");
+PrintWriter out = response.getWriter();
+out.println("Hello World);
+}
+public void destroy(){
+
+}
+}

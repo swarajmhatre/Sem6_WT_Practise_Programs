@@ -1,0 +1,17 @@
+// Sample Dynamic content Servlet
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*
+
+public class DynamicServletDem extends GenericServlet{
+public void service(ServletRequest req, ServletResponse res)
+throws IOException, ServletException
+{
+res.setContentType("Text/HTML")
+PrintWriter out = response.getWriter;
+java.util.Date date  = new java.util.Date()
+out.println("<h1>" + "Today's Date: " + date.toString() + "<h1>");
+out.close()
+}
+}
